@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { NativeLink as Link } from "@/components/native-link";
+import { HeroRotator } from "@/components/hero-rotator";
 import { CTA, OpenLinkIcon, PropertyCard, SectionHeading } from "@/components/ui";
 import { properties } from "@/lib/data";
 
@@ -7,19 +8,7 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <div className="hero-intro">
-          <Image className="hero-intro-image" src="/images/cover_page_no_text.png" alt="" fill priority sizes="100vw" />
-          <div className="hero-intro-overlay" />
-          <div className="shell hero-copy">
-            <p className="eyebrow">Your Osaka, thoughtfully arranged</p>
-            <h1>Stay with ease.<br />Discover Osaka your way.</h1>
-            <p className="lead">A calm apartment base and a human planning conversation for independent journeys across Osaka and Kansai.</p>
-            <div className="button-row">
-              <Link className="button" href="/en/plan-your-journey">Plan your journey</Link>
-              <Link className="button button-secondary" href="/en/stays">Explore the stays</Link>
-            </div>
-          </div>
-        </div>
+        <HeroRotator />
       </section>
 
       <section className="section section-paper">
@@ -58,7 +47,7 @@ export default function HomePage() {
 
       <section className="section">
         <div className="shell">
-          <SectionHeading eyebrow="Your Osaka base" title="Three places to make the city feel like home." copy="Each stay pairs a practical apartment layout with a well-connected Osaka neighborhood." />
+          <SectionHeading eyebrow="Your Osaka base" title="Three ways to make the city feel like home." copy="Each stay pairs a practical apartment layout with a well-connected Osaka neighborhood." />
           <div className="property-grid">{properties.map((property) => <PropertyCard property={property} key={property.slug} />)}</div>
         </div>
       </section>

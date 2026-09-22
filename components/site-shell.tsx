@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { NativeLink as Link } from "@/components/native-link";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 const nav = [
   { href: "/en/stays", label: "Stays" },
@@ -61,5 +62,5 @@ export function SiteFooter() {
 }
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
-  return <><SiteHeader /><main>{children}</main><SiteFooter /></>;
+  return <><SiteHeader /><ScrollReveal><main>{children}</main></ScrollReveal><SiteFooter /></>;
 }
