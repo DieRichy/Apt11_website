@@ -14,7 +14,7 @@ export function PropertyCard({ property }: { property: Property }) {
   return (
     <article className="property-card">
       <Link href={`/en/stays/${property.slug}`} className="property-image">
-        <Image src={property.hero} alt={`Interior at ${property.name}`} fill sizes="(max-width: 800px) 100vw, 33vw" />
+        <Image src={property.hero} alt={`Interior at ${property.name}`} fill sizes="(max-width: 800px) 100vw, 33vw" unoptimized />
         <span>{property.location}</span>
       </Link>
       <div className="property-card-copy">
