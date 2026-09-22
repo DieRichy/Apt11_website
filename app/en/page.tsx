@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { NativeLink as Link } from "@/components/native-link";
 import { CTA, PropertyCard, SectionHeading } from "@/components/ui";
 import { properties } from "@/lib/data";
 
@@ -45,7 +45,7 @@ export default function HomePage() {
 
       <section className="section">
         <div className="shell">
-          <SectionHeading eyebrow="Your Osaka base" title="Three ways to make the city feel like home." copy="Each stay pairs a practical apartment layout with a well-connected Osaka neighborhood." />
+          <SectionHeading eyebrow="Your Osaka base" title="Three places to make the city feel like home." copy="Each stay pairs a practical apartment layout with a well-connected Osaka neighborhood." />
           <div className="property-grid">{properties.map((property) => <PropertyCard property={property} key={property.slug} />)}</div>
         </div>
       </section>
@@ -71,4 +71,3 @@ export default function HomePage() {
     </>
   );
 }
-

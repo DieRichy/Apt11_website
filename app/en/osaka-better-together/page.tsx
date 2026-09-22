@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NativeLink as Link } from "@/components/native-link";
 import { CTA, PropertyCard } from "@/components/ui";
 import { properties } from "@/lib/data";
 
@@ -16,4 +16,3 @@ export default function BetterTogetherPage() {
     <CTA title="Start with your people, not a package." />
   </>;
 }
-

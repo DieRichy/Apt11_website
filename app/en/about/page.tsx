@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NativeLink as Link } from "@/components/native-link";
 import { CTA } from "@/components/ui";
 
 export const metadata = { title: "About" };

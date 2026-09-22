@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NativeLink as Link } from "@/components/native-link";
 
 const nav = [
   { href: "/en/stays", label: "Stays" },
@@ -57,4 +57,3 @@ export function SiteFooter() {
 export function SiteShell({ children }: { children: React.ReactNode }) {
   return <><SiteHeader /><main>{children}</main><SiteFooter /></>;
 }
-

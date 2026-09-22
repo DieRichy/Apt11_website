@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { NativeLink as Link } from "@/components/native-link";
 import type { Property } from "@/lib/data";
 
 export function ArrowLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -48,4 +48,3 @@ export function CTA({ title = "Begin with what matters to you.", copy = "Share y
     </section>
   );
 }
-

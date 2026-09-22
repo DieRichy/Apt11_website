@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { NativeLink as Link } from "@/components/native-link";
 import { notFound } from "next/navigation";
 import { CTA } from "@/components/ui";
 import { getProperty, properties } from "@/lib/data";
@@ -30,4 +30,3 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
     <CTA title={`Make ${property.shortName} part of your Osaka.`} />
   </>;
 }
-
