@@ -214,7 +214,9 @@ h3 { margin-bottom: 14px; font-size: clamp(1.45rem, 2.2vw, 2rem); }
   .wordmark { width: 180px; }
   .button-small { min-height: 38px; padding-inline: 13px; font-size: 1.2rem; }
   .hero, .page-hero { padding-top: 64px; }
-  .hero-stage { min-height: 420px; margin-top: 44px; }
+  .hero-stage { min-height: 0; aspect-ratio: 3374 / 1884; margin-top: 44px; border-radius: 18px; }
+  .hero-stage img { object-fit: contain; }
+  .hero-caption { display: none; }
   .section { padding: 78px 0; }
   .intent-grid, .property-grid, .feature-grid, .placeholder-grid, .principle-grid, .gallery, .field-grid { grid-template-columns: 1fr; }
   .step { grid-template-columns: 48px 1fr; gap: 20px; }
