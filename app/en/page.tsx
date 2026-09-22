@@ -17,8 +17,8 @@ export default function HomePage() {
           </div>
         </div>
         <div className="shell hero-stage">
-          <Image src="/images/kuromon-9-room-a.jpg" alt="Bright apartment interior at Apartment Hotel 11" fill priority sizes="(max-width: 1200px) 100vw, 1180px" />
-          <div className="route-orbit" />
+          <Image src="/images/cover_page_logo.png" alt="Bright apartment interior at Apartment Hotel 11" fill priority sizes="(max-width: 1200px) 100vw, 1180px" />
+          <div className="object-cover" />
           <div className="hero-caption"><strong>Osaka is your base.</strong><span>Kyoto, Nara, and Kobe can become considered extensions—not a rushed checklist.</span></div>
         </div>
       </section>
@@ -27,13 +27,27 @@ export default function HomePage() {
         <div className="shell">
           <SectionHeading eyebrow="Two rhythms, one considered approach" title="How would you like Osaka to feel?" copy="Begin with the kind of journey you want. The right stay and level of support follow from there." />
           <div className="intent-grid">
-            <Link className="intent-card" href="/en/osaka-your-way">
+            <Link className="intent-card intent-card-photo" href="/en/osaka-your-way">
+              <Image
+                className="intent-card-image"
+                src="/images/osaka-your-way.png"
+                alt="Travelers walking through a quiet Osaka neighborhood"
+                fill
+                sizes="(max-width: 650px) 100vw, 50vw"
+              />
               <p className="eyebrow">For independent discovery</p>
               <h3>Osaka,<br />Your Way</h3>
               <p>Local context, a thoughtful route, and room to follow your own curiosity.</p>
               <span className="arrow-link">Discover your way <span>↗</span></span>
             </Link>
-            <Link className="intent-card" href="/en/osaka-better-together">
+            <Link className="intent-card intent-card-photo" href="/en/osaka-better-together">
+              <Image
+                className="intent-card-image"
+                src="/images/osaka-better-together.png"
+                alt="Friends exploring Dotonbori together"
+                fill
+                sizes="(max-width: 650px) 100vw, 50vw"
+              />
               <p className="eyebrow">For families and friends</p>
               <h3>Osaka,<br />Better Together</h3>
               <p>Apartment space, calmer coordination, and more time for the people you came with.</p>

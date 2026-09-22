@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { NativeLink as Link } from "@/components/native-link";
 
 const nav = [
@@ -12,8 +13,13 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="shell nav-row">
         <Link href="/en" className="wordmark" aria-label="Apartment Hotel 11 home">
-          <span>APARTMENT HOTEL 11</span>
-          <small>OFFICIAL LOGO PENDING</small>
+          <Image
+            src="/images/logo.png"
+            alt="Apartment Hotel 11"
+            width={655}
+            height={206}
+            priority
+          />
         </Link>
         <nav aria-label="Primary navigation">
           {nav.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
