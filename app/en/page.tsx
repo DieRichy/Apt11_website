@@ -1,25 +1,24 @@
 import Image from "next/image";
 import { NativeLink as Link } from "@/components/native-link";
-import { CTA, PropertyCard, SectionHeading } from "@/components/ui";
+import { CTA, OpenLinkIcon, PropertyCard, SectionHeading } from "@/components/ui";
 import { properties } from "@/lib/data";
 
 export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <div className="shell hero-copy">
-          <p className="eyebrow">Your Osaka, thoughtfully arranged</p>
-          <h1>Stay with ease.<br />Discover Osaka your way.</h1>
-          <p className="lead">A calm apartment base and a human planning conversation for independent journeys across Osaka and Kansai.</p>
-          <div className="button-row">
-            <Link className="button" href="/en/plan-your-journey">Plan your journey</Link>
-            <Link className="button button-secondary" href="/en/stays">Explore the stays</Link>
+        <div className="hero-intro">
+          <Image className="hero-intro-image" src="/images/cover_page_no_text.png" alt="" fill priority sizes="100vw" />
+          <div className="hero-intro-overlay" />
+          <div className="shell hero-copy">
+            <p className="eyebrow">Your Osaka, thoughtfully arranged</p>
+            <h1>Stay with ease.<br />Discover Osaka your way.</h1>
+            <p className="lead">A calm apartment base and a human planning conversation for independent journeys across Osaka and Kansai.</p>
+            <div className="button-row">
+              <Link className="button" href="/en/plan-your-journey">Plan your journey</Link>
+              <Link className="button button-secondary" href="/en/stays">Explore the stays</Link>
+            </div>
           </div>
-        </div>
-        <div className="shell hero-stage">
-          <Image src="/images/cover_page_logo.png" alt="Bright apartment interior at Apartment Hotel 11" fill priority sizes="(max-width: 1200px) 100vw, 1180px" />
-          <div className="object-cover" />
-          <div className="hero-caption"><strong>Osaka is your base.</strong><span>Kyoto, Nara, and Kobe can become considered extensions—not a rushed checklist.</span></div>
         </div>
       </section>
 
@@ -38,7 +37,7 @@ export default function HomePage() {
               <p className="eyebrow">For independent discovery</p>
               <h3>Osaka,<br />Your Way</h3>
               <p>Local context, a thoughtful route, and room to follow your own curiosity.</p>
-              <span className="arrow-link">Discover your way <span>↗</span></span>
+              <span className="arrow-link">Discover your way <OpenLinkIcon /></span>
             </Link>
             <Link className="intent-card intent-card-photo" href="/en/osaka-better-together">
               <Image
@@ -51,7 +50,7 @@ export default function HomePage() {
               <p className="eyebrow">For families and friends</p>
               <h3>Osaka,<br />Better Together</h3>
               <p>Apartment space, calmer coordination, and more time for the people you came with.</p>
-              <span className="arrow-link">Plan together <span>↗</span></span>
+              <span className="arrow-link">Plan together <OpenLinkIcon /></span>
             </Link>
           </div>
         </div>

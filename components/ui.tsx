@@ -2,8 +2,12 @@ import Image from "next/image";
 import { NativeLink as Link } from "@/components/native-link";
 import type { Property } from "@/lib/data";
 
+export function OpenLinkIcon() {
+  return <svg className="open-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5" /><path d="m10 14 9-9" /><path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" /></svg>;
+}
+
 export function ArrowLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return <Link href={href} className="arrow-link">{children}<span aria-hidden="true">↗</span></Link>;
+  return <Link href={href} className="arrow-link">{children}<OpenLinkIcon /></Link>;
 }
 
 export function SectionHeading({ eyebrow, title, copy }: { eyebrow: string; title: string; copy?: string }) {
