@@ -3,8 +3,9 @@ import { NativeLink as Link } from "@/components/native-link";
 import { ScrollReveal } from "@/components/scroll-reveal";
 
 const nav = [
+  { href: "/en/packages", label: "Packages" },
   { href: "/en/stays", label: "Stays" },
-  { href: "/en/concierge", label: "Concierge" },
+  { href: "/en/concierge", label: "Experiences" },
   { href: "/en/how-it-works", label: "How it works" },
   { href: "/en/about", label: "About" },
 ];
@@ -40,22 +41,23 @@ export function SiteFooter() {
           <p>Tailor-made Osaka Journeys</p>
         </div>
         <div>
-          <p className="micro-label">Contact placeholders</p>
-          <p>[BUSINESS EMAIL]<br />[WHATSAPP NUMBER]</p>
+          <p className="micro-label">Operated by</p>
+          <p>HIWIN<br />Osaka, Japan</p>
         </div>
         <div>
-          <p className="micro-label">Preview status</p>
-          <p>Owner-private MVP<br />No information is submitted.</p>
+          <p className="micro-label">Website status</p>
+          <p>Public Ver.2 MVP<br />Inquiries stay on your device.</p>
         </div>
         <div className="footer-links">
+          <Link href="/en/packages">Compare packages</Link>
           <Link href="/en/plan-your-journey">Plan your journey</Link>
           <Link href="/en/about">About this service</Link>
-          <span>[PRIVACY POLICY URL]</span>
+          <Link href="https://hiwin-japan.co.jp/">HIWIN corporate site</Link>
         </div>
       </div>
       <div className="shell footer-bottom">
         <span>© 2026 Apartment Hotel 11</span>
-        <span>Private preview · Content review required</span>
+        <span>From prices are preview estimates · Final confirmation required</span>
       </div>
     </footer>
   );

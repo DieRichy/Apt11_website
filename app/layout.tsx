@@ -3,15 +3,21 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Apartment Hotel 11 | Tailor-made Osaka Journeys",
+    default: "Apartment Hotel 11 | Osaka & Kansai Packages",
     template: "%s | Apartment Hotel 11",
   },
   description:
-    "A calm apartment base and a human planning conversation for tailor-made journeys across Osaka and Kansai.",
-  metadataBase: new URL("https://apartment-hotel-11-journeys.cherry-swift-1901.chatgpt.site"),
+    "Three HIWIN-led journey packages connecting stays, dining, transport, relaxation, and experiences across Osaka and Kansai.",
+  metadataBase: new URL("https://apartment-hotel-11-kansai.cnai5002.chatgpt.site"),
   openGraph: {
-    title: "Apartment Hotel 11",
-    description: "Tailor-made Osaka Journeys",
+    title: "Apartment Hotel 11 | Three Ways Through Kansai",
+    description: "Essential, Signature, and Prestige journeys by HIWIN.",
+    images: ["/og.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Apartment Hotel 11 | Three Ways Through Kansai",
+    description: "Essential, Signature, and Prestige journeys by HIWIN.",
     images: ["/og.png"],
   },
 };

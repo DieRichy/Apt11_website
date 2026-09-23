@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { NativeLink as Link } from "@/components/native-link";
-import type { Property } from "@/lib/data";
+import type { JourneyPackage, Property } from "@/lib/data";
 
 export function OpenLinkIcon() {
   return <svg className="open-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5" /><path d="m10 14 9-9" /><path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" /></svg>;
@@ -31,6 +31,40 @@ export function PropertyCard({ property }: { property: Property }) {
   );
 }
 
+export function PackageCard({ item, featured = false }: { item: JourneyPackage; featured?: boolean }) {
+  return (
+    <article className={`package-card${featured ? " package-card-featured" : ""}`}>
+      <Link href={`/en/packages/${item.slug}`} className="package-card-image">
+        <Image src={item.image} alt={item.imageAlt} fill sizes="(max-width: 800px) 100vw, 33vw" unoptimized />
+        <span className="package-tier">{item.tier}</span>
+      </Link>
+      <div className="package-card-copy">
+        <p className="eyebrow">{item.location} · 4 days / 3 nights</p>
+        <h3>{item.name}</h3>
+        <p>{item.summary}</p>
+        <div className="package-price"><small>From</small><strong>{item.price}</strong></div>
+        <p className="package-basis">For two guests · Preview starting price</p>
+        <ArrowLink href={`/en/packages/${item.slug}`}>Explore the package</ArrowLink>
+      </div>
+    </article>
+  );
+}
+
+export function PartnerHotelCard({ hotel }: { hotel: { name: string; location: string; image: string; imageAlt: string; packageSlug: string; summary: string; source: string } }) {
+  return (
+    <article className="partner-card">
+      <div className="partner-card-image"><Image src={hotel.image} alt={hotel.imageAlt} fill sizes="(max-width: 800px) 100vw, 50vw" unoptimized /></div>
+      <div className="partner-card-copy">
+        <p className="eyebrow">Partner stay · {hotel.location}</p>
+        <h3>{hotel.name}</h3>
+        <p>{hotel.summary}</p>
+        <small>{hotel.source}</small>
+        <ArrowLink href={`/en/packages/${hotel.packageSlug}`}>See the package</ArrowLink>
+      </div>
+    </article>
+  );
+}
+
 export function PlaceholderPanel({ id, title, label }: { id: string; title: string; label: string }) {
   return (
     <div className="placeholder-panel" aria-label={`${title} placeholder`}>
@@ -42,7 +76,7 @@ export function PlaceholderPanel({ id, title, label }: { id: string; title: stri
   );
 }
 
-export function CTA({ title = "Begin with what matters to you.", copy = "Share your dates, company, pace, and priorities. A future advisor can use the brief to shape the right next conversation." }: { title?: string; copy?: string }) {
+export function CTA({ title = "Start with a package. Make it yours.", copy = "Choose a starting level or share a fully custom brief. Dates, availability, and final inclusions are confirmed with you before booking." }: { title?: string; copy?: string }) {
   return (
     <section className="cta-band">
       <div className="shell cta-grid">
