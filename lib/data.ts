@@ -110,6 +110,17 @@ export type PackagePillar = {
   detail: string;
 };
 
+export type PackageChapter = {
+  name: "Stay" | "Dine" | "Move" | "Relax" | "Enjoy";
+  japanese: string;
+  headline: string;
+  copy: string;
+  image: string;
+  imageAlt: string;
+  imageGenerated?: boolean;
+  facts: { label: string; value: string }[];
+};
+
 export type JourneyPackage = {
   slug: string;
   name: string;
@@ -125,6 +136,8 @@ export type JourneyPackage = {
   experienceLabel: string;
   experienceOptions: string[];
   pillars: PackagePillar[];
+  atAGlance: { label: string; value: string }[];
+  chapters: PackageChapter[];
   itinerary: { day: string; title: string; copy: string }[];
 };
 
@@ -153,6 +166,65 @@ export const journeyPackages: JourneyPackage[] = [
       { name: "Move", japanese: "行", preview: "One-way KIX transfer", detail: "One-way airport transfer by standard taxi, minivan, or equivalent, plus a practical local transport outline." },
       { name: "Relax", japanese: "癒", preview: "Partner relaxation for two", detail: "One partner relaxation experience for two, arranged around the itinerary." },
       { name: "Enjoy", japanese: "楽", preview: "Curated Osaka discovery", detail: "A considered Osaka neighborhood plan, one bookable highlight, and evening ideas." },
+    ],
+    atAGlance: [
+      { label: "Stay", value: "3 nights · Apartment Hotel 11" },
+      { label: "Dine", value: "1 dinner for two*" },
+      { label: "Move", value: "1-way airport transfer*" },
+      { label: "Relax", value: "60-minute treatment*" },
+      { label: "Enjoy", value: "Half-day Osaka route*" },
+    ],
+    chapters: [
+      {
+        name: "Stay", japanese: "住", headline: "Your own Osaka address.",
+        copy: "Settle into an Apartment Hotel 11 base with the everyday space to unpack, reset, and make Osaka feel manageable from the first night.",
+        image: "/images/kuromon-9-room-a.jpg", imageAlt: "Apartment Hotel 11 guest room in Osaka",
+        facts: [
+          { label: "Included", value: "3 nights for two" },
+          { label: "Proposed choice*", value: "Kuromon 9, Tsutenkaku 3, or Namba Minami 7" },
+          { label: "Useful comfort", value: "Kitchen and in-room laundry" },
+        ],
+      },
+      {
+        name: "Dine", japanese: "食", headline: "One Osaka table, already considered.",
+        copy: "A first dinner introduces the generous, unfussy side of Osaka dining, with the rest of the trip left open for spontaneous discoveries.",
+        image: "/images/tonkatsu.jpg", imageAlt: "Japanese tonkatsu meal served in Osaka",
+        facts: [
+          { label: "Proposed inclusion*", value: "Set-course dinner for two" },
+          { label: "Direction*", value: "Tonkatsu or another confirmed HIWIN restaurant" },
+          { label: "Planning note*", value: "Dietary requests shared 7 days ahead" },
+        ],
+      },
+      {
+        name: "Move", japanese: "行", headline: "Land. Exhale. Osaka is waiting.",
+        copy: "A simple private arrival removes the first-day friction, while the rest of the city stays easy to explore by rail, taxi, and on foot.",
+        image: "/images/generated-move-essential.jpg", imageAlt: "Generated placeholder of an airport transfer minivan at Kansai International Airport", imageGenerated: true,
+        facts: [
+          { label: "Proposed vehicle*", value: "Standard private MPV or equivalent" },
+          { label: "Proposed range*", value: "KIX or ITM to central Osaka" },
+          { label: "Planning capacity*", value: "2 guests · 2 large cases" },
+        ],
+      },
+      {
+        name: "Relax", japanese: "癒", headline: "A pause where it helps most.",
+        copy: "Place one restorative appointment after the busiest city stretch, so relaxation supports the journey instead of interrupting it.",
+        image: "/images/spa.jpg", imageAlt: "Calm Japanese relaxation room",
+        facts: [
+          { label: "Proposed inclusion*", value: "60-minute treatment for two" },
+          { label: "Proposed location*", value: "Confirmed central Osaka partner" },
+          { label: "Timing*", value: "Late afternoon on Day 2 or 3" },
+        ],
+      },
+      {
+        name: "Enjoy", japanese: "楽", headline: "One good route beats ten rushed stops.",
+        copy: "Follow a compact Osaka story through market energy, older lanes, and an evening neighborhood, with one reservable highlight along the way.",
+        image: "/images/shinsekai.jpg", imageAlt: "Shinsekai streets and Tsutenkaku in Osaka",
+        facts: [
+          { label: "Proposed route*", value: "Kuromon, Hozenji, and Shinsekai" },
+          { label: "Proposed duration*", value: "Half day at an easy pace" },
+          { label: "Choice*", value: "Observation deck, river cruise, or museum request" },
+        ],
+      },
     ],
     itinerary: [
       { day: "Day 01", title: "Arrive and settle", copy: "Airport pickup, Apartment Hotel 11 check-in, and a gentle first evening nearby." },
@@ -186,6 +258,65 @@ export const journeyPackages: JourneyPackage[] = [
       { name: "Relax", japanese: "癒", preview: "Premium relaxation for two", detail: "A relaxation experience for two, timed around the city plan." },
       { name: "Enjoy", japanese: "楽", preview: "Golf, culture, craft, or hosted day", detail: "Choose one Signature Experience, such as a golf day or a privately hosted Osaka, Kyoto, or Nara day, subject to reservation and confirmation." },
     ],
+    atAGlance: [
+      { label: "Stay", value: "3 nights · W Osaka" },
+      { label: "Dine", value: "2 selected dinners*" },
+      { label: "Move", value: "Return transfer + car day*" },
+      { label: "Relax", value: "90-minute treatment*" },
+      { label: "Enjoy", value: "1 private Signature day*" },
+    ],
+    chapters: [
+      {
+        name: "Stay", japanese: "住", headline: "Design energy, with Osaka at the door.",
+        copy: "Use W Osaka as a confident city anchor: central enough for spontaneous evenings, and polished enough to make returning feel like part of the experience.",
+        image: "/images/w-osaka-room.jpg", imageAlt: "Official W Osaka guest room with city views",
+        facts: [
+          { label: "Included", value: "3 nights for two" },
+          { label: "Proposed room level*", value: "Wonderful or Spectacular Room" },
+          { label: "Proposed extra*", value: "Daily breakfast for two" },
+        ],
+      },
+      {
+        name: "Dine", japanese: "食", headline: "Osaka flavour, with the decisions made well.",
+        copy: "Two reservations balance theatre and intimacy: one chef-led counter experience and one table chosen around your preferred side of the city.",
+        image: "/images/generated-dine-signature.jpg", imageAlt: "Generated placeholder of a premium teppanyaki counter dinner in Osaka", imageGenerated: true,
+        facts: [
+          { label: "Proposed inclusion*", value: "2 dinners for two" },
+          { label: "Proposed format*", value: "Chef counter + selected HIWIN restaurant" },
+          { label: "Reservation window*", value: "Requested 14 days ahead" },
+        ],
+      },
+      {
+        name: "Move", japanese: "行", headline: "The city moves around your schedule.",
+        copy: "Private airport transfers frame the trip, while a dedicated vehicle day keeps one longer Osaka or Kansai plan smooth from door to door.",
+        image: "/images/generated-move-signature.jpg", imageAlt: "Generated placeholder of a premium Japanese executive MPV in Osaka", imageGenerated: true,
+        facts: [
+          { label: "Proposed vehicle*", value: "Toyota Alphard, Vellfire, or equivalent" },
+          { label: "Proposed service*", value: "Return airport transfer + 8-hour car day" },
+          { label: "Planning capacity*", value: "Up to 4 guests · 4 medium cases" },
+        ],
+      },
+      {
+        name: "Relax", japanese: "癒", headline: "Let the city fall quiet for an hour.",
+        copy: "A longer treatment creates a genuine reset between full days, positioned around the itinerary rather than treated as an afterthought.",
+        image: "/images/generated-relax-signature.jpg", imageAlt: "Generated placeholder of a premium Osaka skyline spa room", imageGenerated: true,
+        facts: [
+          { label: "Proposed inclusion*", value: "90-minute treatment for two" },
+          { label: "Proposed setting*", value: "Hotel or confirmed premium partner" },
+          { label: "Preferred timing*", value: "Day 3 afternoon" },
+        ],
+      },
+      {
+        name: "Enjoy", japanese: "楽", headline: "Give one day a stronger point of view.",
+        copy: "Choose the day that defines the package: a privately hosted city, a Kansai golf request, or a craft and design route built around your interests.",
+        image: "/images/osaka-castle.jpg", imageAlt: "Osaka Castle and the city skyline",
+        facts: [
+          { label: "Proposed duration*", value: "One private 8-hour day" },
+          { label: "Possible direction*", value: "Osaka, Kyoto, Nara, golf, or craft" },
+          { label: "Guide request*", value: "English, Chinese, or Japanese support" },
+        ],
+      },
+    ],
     itinerary: [
       { day: "Day 01", title: "A bold Osaka arrival", copy: "Private airport transfer, W Osaka check-in, and a selected dinner." },
       { day: "Day 02", title: "Your Signature Experience", copy: "Choose a privately hosted city day, a golf request, or another confirmed experience shaped around your interests." },
@@ -217,6 +348,65 @@ export const journeyPackages: JourneyPackage[] = [
       { name: "Move", japanese: "行", preview: "Dedicated private movement", detail: "Airport transfer, intercity movement, and dedicated private transport. Alphard Executive Lounge, Mercedes-Benz V-Class, or equivalent may be requested, subject to supplier confirmation." },
       { name: "Relax", japanese: "癒", preview: "Hotel spa or premium relaxation", detail: "Hotel spa or a confirmed premium relaxation experience." },
       { name: "Enjoy", japanese: "楽", preview: "Private cultural access or premium golf", detail: "Choose one Private Access Experience. Requests may include a resident monk-led Buddhist temple visit, Shinto priest-guided formal shrine worship, private tea or craft, or premium golf. Every named venue and access arrangement requires confirmation." },
+    ],
+    atAGlance: [
+      { label: "Stay", value: "3 nights · Aman Kyoto" },
+      { label: "Dine", value: "3 dining moments*" },
+      { label: "Move", value: "Dedicated private movement*" },
+      { label: "Relax", value: "120-minute ritual*" },
+      { label: "Enjoy", value: "1 private access request*" },
+    ],
+    chapters: [
+      {
+        name: "Stay", japanese: "住", headline: "A forest retreat that changes the pace.",
+        copy: "Aman Kyoto becomes the quiet center of the journey, allowing Kyoto to be experienced with more space before and after each planned encounter.",
+        image: "/images/aman-kyoto-room.webp", imageAlt: "Official Aman Kyoto room overlooking a forest garden",
+        facts: [
+          { label: "Included", value: "3 nights for two" },
+          { label: "Proposed category*", value: "Susuki or Nara Room, or confirmed equivalent" },
+          { label: "Proposed extra*", value: "Daily breakfast for two" },
+        ],
+      },
+      {
+        name: "Dine", japanese: "食", headline: "Season, setting, and time at the table.",
+        copy: "A small dining sequence moves from the retreat to Kyoto: one deeply local evening, one refined counter, and room for a private seasonal request.",
+        image: "/images/generated-dine-prestige.jpg", imageAlt: "Generated placeholder of a private Kyoto kaiseki dinner", imageGenerated: true,
+        facts: [
+          { label: "Proposed inclusion*", value: "3 dining moments for two" },
+          { label: "Proposed sequence*", value: "Retreat dinner, Kyoto counter, private seasonal request" },
+          { label: "Reservation window*", value: "Requested 30 days ahead" },
+        ],
+      },
+      {
+        name: "Move", japanese: "行", headline: "Privacy continues between destinations.",
+        copy: "A dedicated chauffeur plan connects the airport, Kyoto, and the chosen Kansai extension without turning movement into another planning task.",
+        image: "/images/generated-move-prestige.jpg", imageAlt: "Generated placeholder of a private luxury chauffeur van near Kyoto", imageGenerated: true,
+        facts: [
+          { label: "Proposed vehicle*", value: "Alphard Executive Lounge, V-Class, or equivalent" },
+          { label: "Proposed service*", value: "Arrival, departure, and up to 10 hours on Days 2–3" },
+          { label: "Planning capacity*", value: "Up to 4 guests · luggage plan confirmed" },
+        ],
+      },
+      {
+        name: "Relax", japanese: "癒", headline: "Stillness is part of the itinerary.",
+        copy: "A longer restorative ritual and unhurried forest time make the retreat itself one of the journey's defining experiences.",
+        image: "/images/generated-relax-prestige.jpg", imageAlt: "Generated placeholder of a private hinoki bath in a Kyoto forest", imageGenerated: true,
+        facts: [
+          { label: "Proposed inclusion*", value: "120-minute ritual for two" },
+          { label: "Proposed setting*", value: "Hotel spa or private confirmed partner" },
+          { label: "Optional extension*", value: "Private bath or forest wellness request" },
+        ],
+      },
+      {
+        name: "Enjoy", japanese: "楽", headline: "Access should feel meaningful, never rushed.",
+        copy: "Request one carefully hosted encounter—a temple or shrine context, private tea, artisan time, garden access, or premium golf—then build the day around it.",
+        image: "/images/photorealistic-wide-shot-of-the-stone-lantern-line.jpg", imageAlt: "Moss-covered stone lanterns in a quiet Japanese forest",
+        facts: [
+          { label: "Proposed inclusion*", value: "One private access request" },
+          { label: "Possible format*", value: "Temple, shrine, tea, artisan, garden, or golf" },
+          { label: "Confirmation needed*", value: "Venue, host, ritual scope, and photography" },
+        ],
+      },
     ],
     itinerary: [
       { day: "Day 01", title: "Enter the garden", copy: "Private arrival at Aman Kyoto, time to settle, and a calm first dining experience." },

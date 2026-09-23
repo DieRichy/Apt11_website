@@ -28,7 +28,7 @@ export function HeroRotator() {
     <Image key={scene.image} className="hero-intro-image" src={scene.image} alt="" fill priority={index === 0} sizes="100vw" />
     <div className="hero-intro-overlay" />
     <div className="shell hero-copy">
-      <h1>Travel with<br /><span className={`hero-ease hero-ease-${scene.style}`} key={scene.word} style={{ color: scene.color }}>{scene.word}.</span><br />Choose your way into Kansai.</h1>
+      <h1>Stay with<br /><span className={`hero-ease hero-ease-${scene.style}`} key={scene.word} style={{ color: scene.color }}>{scene.word}.</span><br />Choose your way into Kansai.</h1>
       <div className="hero-rotator" aria-live="polite" aria-atomic="true"><p key={scene.message}>{scene.message}</p></div>
       <div className="button-row">
         <Link className="button button-secondary hero-stays-button" href="/en/packages">Explore the packages</Link>

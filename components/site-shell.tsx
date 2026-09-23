@@ -76,7 +76,7 @@ export function SiteHeader() {
               <Image className="social-logo-image social-logo-xiaohongshu" src="/images/social-xiaohongshu.png" alt="" width={447} height={447} unoptimized />
             </Link>
             <Link className="header-social-link header-social-hiwin" href="https://hiwin-japan.co.jp/" target="_blank" rel="noreferrer" aria-label="HIWIN corporate website" title="HIWIN Japan">
-              <Image src="/images/hiwin_logo.png" alt="" width={1212} height={322} unoptimized />
+              <Image src="/images/hiwin_logo.png" alt="" width={1400} height={422} unoptimized />
             </Link>
           </div>
         </div>
