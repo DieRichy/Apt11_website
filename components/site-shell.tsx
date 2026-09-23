@@ -73,7 +73,7 @@ function MobileNavigation() {
         </section>)}
       </nav>
       <div className="mobile-nav-footer">
-        <Link href="/en/plan-your-journey" className="button button-light">Plan your journey</Link>
+        <Link href="/en/plan-your-journey" className="button button-light journey-cta-button">Plan your journey</Link>
         <HeaderSocialLinks mobile />
       </div>
     </div>
@@ -103,7 +103,7 @@ export function SiteHeader() {
           </div>)}
         </nav>
         <div className="header-actions">
-          <Link href="/en/plan-your-journey" className="button button-small header-plan-button">Plan your journey</Link>
+          <Link href="/en/plan-your-journey" className="button button-small header-plan-button journey-cta-button">Plan your journey</Link>
           <HeaderSocialLinks />
         </div>
         <MobileNavigation />

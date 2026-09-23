@@ -99,7 +99,7 @@ export function CTA({ title = "Start with a package. Make it yours.", copy = "Ch
     <section className="cta-band">
       <div className="shell cta-grid">
         <div><p className="eyebrow light">A journey shaped around you</p><h2>{title}</h2></div>
-        <div><p>{copy}</p><Link className="button button-light" href="/en/plan-your-journey">Plan your journey</Link></div>
+        <div><p>{copy}</p><Link className="button button-light journey-cta-button" href="/en/plan-your-journey">Plan your journey</Link></div>
       </div>
     </section>
   );
