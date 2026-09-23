@@ -27,10 +27,10 @@ export function PackageShowcase({ items }: { items: JourneyPackage[] }) {
             <button
               className="package-showcase-toggle"
               type="button"
-              aria-label={`${isActive ? "Close" : "Show"} ${item.name} inclusions`}
+              aria-label={`Show ${item.name} inclusions`}
               aria-expanded={isActive}
               aria-controls={`package-details-${item.slug}`}
-              onClick={() => setActiveSlug(isActive ? null : item.slug)}
+              onClick={() => setActiveSlug(item.slug)}
             />
             <div className="package-showcase-image">
               <Image src={item.image} alt={item.imageAlt} fill sizes="(max-width: 900px) 100vw, 60vw" unoptimized />
@@ -50,7 +50,6 @@ export function PackageShowcase({ items }: { items: JourneyPackage[] }) {
                     <span aria-hidden="true">{pillar.japanese}</span><b>{pillar.name}</b><p>{pillar.preview}</p>
                   </div>
                 ))}
-                <p className="package-showcase-confirmation">Vehicle class, named venues, tee times, cultural access, and all final inclusions require confirmation.</p>
               </div>
               <div className="package-showcase-actions">
                 <Link className="arrow-link" href={`/en/packages/${item.slug}`}>View full package <OpenLinkIcon /></Link>
