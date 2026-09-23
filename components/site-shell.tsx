@@ -44,13 +44,13 @@ const nav: NavItem[] = [
 function HeaderSocialLinks({ mobile = false }: { mobile?: boolean }) {
   return <div className={`header-socials${mobile ? " mobile-header-socials" : ""}`} role="group" aria-label="Social media and company links">
     <Link className="header-social-link" href="https://www.instagram.com/zhuyi_hotel/" target="_blank" rel="noreferrer" aria-label="Apartment Hotel 11 on Instagram" title="Instagram">
-      <Image className="social-logo-image social-logo-instagram" src="/images/social-instagram.png" alt="" width={484} height={413} unoptimized />
+      <Image className="social-logo-image social-logo-instagram" src="/images/social-instagram.png" alt="" width={438} height={438} unoptimized />
     </Link>
     <Link className="header-social-link" href="https://line.me/ti/p/OPyUC3OZo9" target="_blank" rel="noreferrer" aria-label="Apartment Hotel 11 on LINE" title="LINE">
-      <Image className="social-logo-image social-logo-line" src="/images/social-line.png" alt="" width={592} height={337} unoptimized />
+      <Image className="social-logo-image social-logo-line" src="/images/social-line.png" alt="" width={438} height={438} unoptimized />
     </Link>
     <Link className="header-social-link" href="https://www.xiaohongshu.com/user/profile/665d65e4000000000303207a?xhsshare=CopyLink&appuid=665d65e4000000000303207a&apptime=1721635778" target="_blank" rel="noreferrer" aria-label="Apartment Hotel 11 on Xiaohongshu" title="Xiaohongshu">
-      <Image className="social-logo-image social-logo-xiaohongshu" src="/images/social-xiaohongshu.png" alt="" width={447} height={447} unoptimized />
+      <Image className="social-logo-image social-logo-xiaohongshu" src="/images/social-xiaohongshu.png" alt="" width={438} height={438} unoptimized />
     </Link>
     <Link className="header-social-link header-social-hiwin" href="https://hiwin-japan.co.jp/" target="_blank" rel="noreferrer" aria-label="HIWIN corporate website" title="HIWIN Japan">
       <Image src="/images/hiwin_logo.png" alt="" width={1400} height={422} unoptimized />
@@ -60,8 +60,7 @@ function HeaderSocialLinks({ mobile = false }: { mobile?: boolean }) {
 
 function MobileNavigation() {
   return <details className="mobile-navigation">
-    <summary className="mobile-menu-trigger">
-      <span>Menu</span>
+    <summary className="mobile-menu-trigger" aria-label="Open or close navigation menu">
       <i aria-hidden="true"><b /><b /></i>
     </summary>
     <div className="mobile-nav-panel">

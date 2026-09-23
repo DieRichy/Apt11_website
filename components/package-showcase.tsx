@@ -9,7 +9,7 @@ export function PackageShowcase({ items }: { items: JourneyPackage[] }) {
     <div className="package-showcase">
       {items.map((item, index) => (
         <article
-          className="package-showcase-card"
+          className={`package-showcase-card package-showcase-card-${item.slug}`}
           key={item.slug}
           style={{ "--package-order": index } as CSSProperties}
         >
@@ -18,6 +18,9 @@ export function PackageShowcase({ items }: { items: JourneyPackage[] }) {
             <Image src={item.image} alt={item.imageAlt} fill sizes="(max-width: 900px) 100vw, 60vw" unoptimized />
             <div className="package-showcase-image-shade" />
             <span className="package-tier">{item.tier}</span>
+            <div className="package-level-meter" role="img" aria-label={`Service depth ${index + 1} of 3`}>
+              {[0, 1, 2].map((level) => <i className={level <= index ? "is-active" : ""} key={level} />)}
+            </div>
           </div>
           <div className="package-showcase-copy">
             <div className="package-showcase-heading">
