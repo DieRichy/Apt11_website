@@ -155,7 +155,7 @@ h3 { margin-bottom: 14px; font-size: clamp(1.45rem, 2.2vw, 2rem); }
 .route-strip i { color: var(--beige); font-style: normal; }
 
 .page-hero { padding: 96px 0 80px; border-bottom: 1px solid var(--line); }
-.stays-page-hero { min-height: clamp(470px, 56.25vw, 780px); display: flex; align-items: center; background: linear-gradient(90deg, rgba(249,245,237,.94) 0%, rgba(249,245,237,.78) 42%, rgba(249,245,237,.18) 70%, rgba(249,245,237,.06) 100%), url('/images/cover_page_no_text.png') center top / 100% auto no-repeat; }
+.stays-page-hero { min-height: clamp(470px, 56.25vw, 780px); display: flex; align-items: center; background: linear-gradient(90deg, rgba(249,245,237,.94) 0%, rgba(249,245,237,.78) 42%, rgba(249,245,237,.18) 70%, rgba(249,245,237,.06) 100%), url('/images/stays-hero.jpg') center top / 100% auto no-repeat; }
 .page-hero h1 { max-width: 1000px; }
 .page-hero .lead { margin-bottom: 0; }
 .page-hero-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, .5fr); gap: 60px; align-items: end; }

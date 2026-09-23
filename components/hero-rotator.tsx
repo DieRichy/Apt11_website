@@ -5,13 +5,13 @@ import Image from "next/image";
 import { NativeLink as Link } from "@/components/native-link";
 
 const scenes = [
-  { image: "/images/687773-3840x2160-desktop-4k-osaka-castle-background.png", word: "WONDER", style: "editorial", color: "#f1c27d", message: "Three starting points. One connected Kansai journey." },
-  { image: "/images/Shinsekai-Osaka-Japan-scaled.png", word: "CHARACTER", style: "classic", color: "#f0a060", message: "Stay, dine, move, relax, and enjoy with less friction." },
-  { image: "/images/photorealistic-high-end-japanese-massage-spa-in-os.png", word: "CALM", style: "mincho", color: "#c9d7c3", message: "Choose a level of support, then make it personal." },
-  { image: "/images/photorealistic-high-end-tonkatsu-teishoku--35mm-le.png", word: "TASTE", style: "soft", color: "#f1b36d", message: "Osaka flavors connected to the place you stay." },
-  { image: "/images/universal studio.png", word: "JOY", style: "handwritten", color: "#ffd45a", message: "Practical, premium, or prestige. Your pace stays yours." },
-  { image: "/images/photorealistic-premium-japanese-chauffeur-service-.png", word: "EASE", style: "refined", color: "#d8bc9a", message: "Transport and planning shaped around the whole trip." },
-  { image: "/images/photorealistic-dotonbori-osaka-at-night--canal-ref.png", word: "ENERGY", style: "expressive", color: "#ff8a5b", message: "A city night, a quiet room, and one clear plan." },
+  { image: "/images/osaka-castle.jpg", word: "WONDER", style: "editorial", color: "#f1c27d", message: "Three starting points. One connected Kansai journey." },
+  { image: "/images/shinsekai.jpg", word: "CHARACTER", style: "classic", color: "#f0a060", message: "Stay, dine, move, relax, and enjoy with less friction." },
+  { image: "/images/spa.jpg", word: "CALM", style: "mincho", color: "#c9d7c3", message: "Choose a level of support, then make it personal." },
+  { image: "/images/tonkatsu.jpg", word: "TASTE", style: "soft", color: "#f1b36d", message: "Osaka flavors connected to the place you stay." },
+  { image: "/images/universal-studios.jpg", word: "JOY", style: "handwritten", color: "#ffd45a", message: "Practical, premium, or prestige. Your pace stays yours." },
+  { image: "/images/chauffeur.jpg", word: "EASE", style: "refined", color: "#d8bc9a", message: "Transport and planning shaped around the whole trip." },
+  { image: "/images/dotonbori.jpg", word: "ENERGY", style: "expressive", color: "#ff8a5b", message: "A city night, a quiet room, and one clear plan." },
 ];
 
 export function HeroRotator() {
