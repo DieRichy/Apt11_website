@@ -131,6 +131,10 @@ h3 { margin-bottom: 14px; font-size: clamp(1.45rem, 2.2vw, 2rem); }
 .section-compact { padding: 72px 0; }
 .section-tint { background: var(--beige-soft); }
 .section-paper { background: var(--paper); }
+.home-packages-section { background: #fffdf8; }
+.home-destinations-section { border-top: 1px solid rgba(105,71,40,.1); background: #f3ede4; }
+.home-services-section { border-top: 1px solid rgba(105,71,40,.08); background: #e8d8c4; }
+.home-stays-section { border-top: 1px solid rgba(105,71,40,.08); background: #f8f5ee; }
 .section-heading { max-width: 1200px; margin-bottom: 48px; }
 .section-heading > p:last-child { max-width: 640px; color: #5d554d; font-size: 1.05rem; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }

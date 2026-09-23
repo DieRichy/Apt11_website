@@ -17,7 +17,7 @@ export default function HomePage() {
     <>
       <section className="hero"><HeroRotator /></section>
 
-      <section className="section section-paper" id="packages">
+      <section className="section section-paper home-packages-section" id="packages">
         <div className="shell">
           <SectionHeading eyebrow="Three ways into Kansai" title="Choose your starting level." copy="Each package connects the stay with dining, movement, relaxation, and the experiences around it. Start here, then adjust the details around your dates and priorities." />
           <PackageShowcase items={journeyPackages} />
@@ -25,7 +25,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section-paper">
+      <section className="section home-destinations-section">
         <div className="shell">
           <SectionHeading eyebrow="Where the five parts take you" title="A reason to go, not a checklist to finish." copy="Every destination is considered through the same five-part lens. Explore the first three routes now; the wider Kansai directions remain planning previews until their service details are confirmed." />
           <div className="destination-grid destination-grid-home">{destinations.slice(0, 3).map((destination) => <DestinationCard destination={destination} key={destination.slug} />)}</div>
@@ -33,7 +33,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section-tint">
+      <section className="section section-tint home-services-section">
         <div className="shell">
           <SectionHeading eyebrow="One connected journey" title="Stay. Dine. Move. Relax. Enjoy." copy="Apartment Hotel 11 and HIWIN bring the practical parts of a Kansai stay into one clearer conversation." />
           <div className="service-pillar-grid">
@@ -45,7 +45,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section home-stays-section">
         <div className="shell">
           <SectionHeading eyebrow="The Essential Osaka base" title="Three Apartment Hotel 11 stays." copy="Choose the neighborhood and apartment layout that best fits your group, then connect the rest of the Essential package around it." />
           <div className="property-grid">{properties.map((property) => <PropertyCard property={property} key={property.slug} />)}</div>
