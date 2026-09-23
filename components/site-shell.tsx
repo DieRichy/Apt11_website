@@ -67,13 +67,13 @@ export function SiteHeader() {
           <Link href="/en/plan-your-journey" className="button button-small header-plan-button">Plan your journey</Link>
           <div className="header-socials" role="group" aria-label="Social media and company links">
             <Link className="header-social-link" href="https://www.instagram.com/zhuyi_hotel/" target="_blank" rel="noreferrer" aria-label="Apartment Hotel 11 on Instagram" title="Instagram">
-              <span className="social-glyph social-instagram" aria-hidden="true" />
+              <Image className="social-logo-image social-logo-instagram" src="/images/social-instagram.png" alt="" width={484} height={413} unoptimized />
             </Link>
             <Link className="header-social-link" href="https://line.me/ti/p/OPyUC3OZo9" target="_blank" rel="noreferrer" aria-label="Apartment Hotel 11 on LINE" title="LINE">
-              <span className="social-glyph social-line" aria-hidden="true">LINE</span>
+              <Image className="social-logo-image social-logo-line" src="/images/social-line.png" alt="" width={592} height={337} unoptimized />
             </Link>
             <Link className="header-social-link" href="https://www.xiaohongshu.com/user/profile/665d65e4000000000303207a?xhsshare=CopyLink&appuid=665d65e4000000000303207a&apptime=1721635778" target="_blank" rel="noreferrer" aria-label="Apartment Hotel 11 on Xiaohongshu" title="Xiaohongshu">
-              <span className="social-glyph social-xiaohongshu" aria-hidden="true">小红书</span>
+              <Image className="social-logo-image social-logo-xiaohongshu" src="/images/social-xiaohongshu.png" alt="" width={447} height={447} unoptimized />
             </Link>
             <Link className="header-social-link header-social-hiwin" href="https://hiwin-japan.co.jp/" target="_blank" rel="noreferrer" aria-label="HIWIN corporate website" title="HIWIN Japan">
               <Image src="/images/hiwin_logo.png" alt="" width={1212} height={322} unoptimized />

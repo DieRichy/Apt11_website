@@ -284,7 +284,7 @@ export const services = [
     title: "Enjoy",
     japanese: "楽",
     description: "City culture, neighborhood discoveries, and Osaka evenings connected into one considered journey.",
-    image: "/images/dotonbori.jpg",
+    image: "/images/photorealistic-wide-shot-of-the-stone-lantern-line.jpg",
   },
 ];
 
@@ -338,8 +338,8 @@ export const destinations: Destination[] = [
     summary: "A considered Kyoto journey balances renowned places with quieter cultural encounters and room to absorb them.",
     bestMatch: "Signature or Prestige",
     recommendedTime: "1–3 days",
-    image: "/images/aman-kyoto-room.webp",
-    imageAlt: "A quiet Aman Kyoto room looking toward a forest garden",
+    image: "/images/photorealistic-full-body-shot-of-a-woman-wearing-a.jpg",
+    imageAlt: "A woman in a pale kimono walking through a traditional Kyoto street",
     detailReady: true,
     pillars: [
       { name: "Stay", japanese: "住", preview: "Aman Kyoto or confirmed alternative", detail: "Use Aman Kyoto or another confirmed premium base to place stillness and landscape at the center of the stay." },
@@ -380,6 +380,8 @@ export const destinations: Destination[] = [
     summary: "A future route connecting Nara's spiritual history with the workshops and landscapes of Yoshino.",
     bestMatch: "Signature or Prestige",
     recommendedTime: "1–2 days",
+    image: "/images/photorealistic-medium-shot-of-a-graceful-sika-deer.jpg",
+    imageAlt: "A sika deer standing in a sunlit grove in Nara",
     detailReady: false,
     pillars: [],
     highlights: [],

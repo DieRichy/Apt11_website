@@ -5,7 +5,7 @@ import Image from "next/image";
 import { NativeLink as Link } from "@/components/native-link";
 
 const scenes = [
-  { image: "/images/osaka-castle.jpg", word: "WONDER", style: "editorial", color: "#f1c27d", message: "Three starting points. One connected Kansai journey." },
+  { image: "/images/photorealistic-wide-establishing-shot-of-himeji-ca.jpg", word: "WONDER", style: "editorial", color: "#f1c27d", message: "Three starting points. One connected Kansai journey." },
   { image: "/images/shinsekai.jpg", word: "CHARACTER", style: "classic", color: "#f0a060", message: "Stay, dine, move, relax, and enjoy with less friction." },
   { image: "/images/spa.jpg", word: "CALM", style: "mincho", color: "#c9d7c3", message: "Choose a level of support, then make it personal." },
   { image: "/images/tonkatsu.jpg", word: "TASTE", style: "soft", color: "#f1b36d", message: "Osaka flavors connected to the place you stay." },
