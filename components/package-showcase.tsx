@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import type { CSSProperties } from "react";
 import { NativeLink as Link } from "@/components/native-link";
+import { OpenLinkIcon } from "@/components/ui";
 import type { JourneyPackage } from "@/lib/data";
 
 export function PackageShowcase({ items }: { items: JourneyPackage[] }) {
@@ -23,6 +24,14 @@ export function PackageShowcase({ items }: { items: JourneyPackage[] }) {
             style={{ "--package-order": index } as CSSProperties}
           >
             <div className="package-trace" aria-hidden="true"><i /><i /><i /><i /></div>
+            <button
+              className="package-showcase-toggle"
+              type="button"
+              aria-label={`${isActive ? "Close" : "Show"} ${item.name} inclusions`}
+              aria-expanded={isActive}
+              aria-controls={`package-details-${item.slug}`}
+              onClick={() => setActiveSlug(isActive ? null : item.slug)}
+            />
             <div className="package-showcase-image">
               <Image src={item.image} alt={item.imageAlt} fill sizes="(max-width: 900px) 100vw, 60vw" unoptimized />
               <div className="package-showcase-image-shade" />
@@ -35,7 +44,7 @@ export function PackageShowcase({ items }: { items: JourneyPackage[] }) {
               </div>
               <p className="package-showcase-summary">{item.summary}</p>
               <p className="package-showcase-reason"><span>Why this level</span>{item.reason}</p>
-              <div className="package-showcase-details">
+              <div className="package-showcase-details" id={`package-details-${item.slug}`}>
                 {item.pillars.map((pillar, pillarIndex) => (
                   <div className="package-showcase-pillar" key={pillar.name} style={{ "--pillar-order": pillarIndex } as CSSProperties}>
                     <span aria-hidden="true">{pillar.japanese}</span><b>{pillar.name}</b><p>{pillar.preview}</p>
@@ -44,10 +53,7 @@ export function PackageShowcase({ items }: { items: JourneyPackage[] }) {
                 <p className="package-showcase-confirmation">Vehicle class, named venues, tee times, cultural access, and all final inclusions require confirmation.</p>
               </div>
               <div className="package-showcase-actions">
-                <button className="package-showcase-toggle" type="button" aria-expanded={isActive} onClick={() => setActiveSlug(isActive ? null : item.slug)}>
-                  {isActive ? "Close preview" : "Preview inclusions"}
-                </button>
-                <Link className="arrow-link" href={`/en/packages/${item.slug}`}>View full package <span aria-hidden="true">↗</span></Link>
+                <Link className="arrow-link" href={`/en/packages/${item.slug}`}>View full package <OpenLinkIcon /></Link>
               </div>
             </div>
           </article>
