@@ -19,7 +19,7 @@ export default async function PackageDetailPage({ params }: { params: Promise<{ 
   const item = getJourneyPackage(slug);
   if (!item) notFound();
 
-  return <div className="package-detail-page">
+  return <div className={`package-detail-page package-detail-page-${item.slug}`}>
     <section className="package-detail-hero">
       <div className="package-detail-image">
         <Image src={item.image} alt={item.imageAlt} fill priority sizes="(max-width: 900px) 100vw, 58vw" unoptimized />
@@ -55,7 +55,7 @@ export default async function PackageDetailPage({ params }: { params: Promise<{ 
     <section className="package-chapter-section">
       <div className="package-wide-shell package-chapter-heading">
         <p className="eyebrow">Inside {item.name}</p>
-        <h2>Less fine print.<br />More of what the journey feels like.</h2>
+        <h2>Less fine print. More of what the journey feels like.</h2>
         <p className="mobile-swipe-cue">Swipe through Stay, Dine, Move, Relax, and Enjoy →</p>
       </div>
       <div className="package-chapter-rotator">
@@ -93,7 +93,7 @@ export default async function PackageDetailPage({ params }: { params: Promise<{ 
 
     <section className="package-confirmation-section">
       <div className="package-wide-shell package-confirmation-grid">
-        <div><p className="eyebrow">Before confirmation</p><h2>Clear starting price.<br />A proposal built for your dates.</h2></div>
+        <div><p className="eyebrow">Before confirmation</p><h2>Clear starting price. A proposal built for your dates.</h2></div>
         <div><p>The displayed price is an MVP starting point for two guests. Airfare is excluded. Final room category, dining, transport, relaxation, activities, taxes, cancellation terms, and availability are confirmed before booking.</p><p className="muted">No payment or reservation takes place on this website.</p></div>
       </div>
     </section>
