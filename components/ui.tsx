@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { NativeLink as Link } from "@/components/native-link";
-import type { JourneyPackage, Property } from "@/lib/data";
+import type { Destination, JourneyPackage, Property } from "@/lib/data";
 
 export function OpenLinkIcon() {
   return <svg className="open-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5" /><path d="m10 14 9-9" /><path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" /></svg>;
@@ -63,6 +63,24 @@ export function PartnerHotelCard({ hotel }: { hotel: { name: string; location: s
       </div>
     </article>
   );
+}
+
+export function DestinationCard({ destination }: { destination: Destination }) {
+  const content = <>
+    <div className="destination-card-visual">
+      {destination.image ? <Image src={destination.image} alt={destination.imageAlt ?? ""} fill sizes="(max-width: 800px) 100vw, 33vw" unoptimized /> : <span aria-hidden="true">{destination.kanji}</span>}
+      <div className="destination-card-shade" />
+      <p>{destination.region}</p>
+    </div>
+    <div className="destination-card-copy">
+      <p className="eyebrow">{destination.theme}</p>
+      <h3>{destination.name}</h3>
+      <p>{destination.summary}</p>
+      <div className="destination-card-meta"><span>{destination.bestMatch}</span><span>{destination.recommendedTime}</span></div>
+      {destination.detailReady ? <span className="arrow-link">Explore through five parts <OpenLinkIcon /></span> : <small>Planning direction · Detail route to follow</small>}
+    </div>
+  </>;
+  return destination.detailReady ? <Link className="destination-card" href={`/en/destinations/${destination.slug}`}>{content}</Link> : <article className="destination-card destination-card-future">{content}</article>;
 }
 
 export function PlaceholderPanel({ id, title, label }: { id: string; title: string; label: string }) {

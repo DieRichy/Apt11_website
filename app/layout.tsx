@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     template: "%s | Apartment Hotel 11",
   },
   description:
-    "Three HIWIN-led journey packages connecting stays, dining, transport, relaxation, and experiences across Osaka and Kansai.",
+    "Three HIWIN-led journey packages and destination directions connecting stays, dining, transport, relaxation, and experiences across Osaka and Kansai.",
   metadataBase: new URL("https://apartment-hotel-11-kansai.cnai5002.chatgpt.site"),
   openGraph: {
     title: "Apartment Hotel 11 | Three Ways Through Kansai",

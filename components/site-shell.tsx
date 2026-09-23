@@ -4,6 +4,7 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 
 const nav = [
   { href: "/en/packages", label: "Packages" },
+  { href: "/en/destinations", label: "Destinations" },
   { href: "/en/stays", label: "Stays" },
   { href: "/en/concierge", label: "Experiences" },
   { href: "/en/how-it-works", label: "How it works" },
@@ -50,6 +51,7 @@ export function SiteFooter() {
         </div>
         <div className="footer-links">
           <Link href="/en/packages">Compare packages</Link>
+          <Link href="/en/destinations">Explore destinations</Link>
           <Link href="/en/plan-your-journey">Plan your journey</Link>
           <Link href="/en/about">About this service</Link>
           <Link href="https://hiwin-japan.co.jp/">HIWIN corporate site</Link>
