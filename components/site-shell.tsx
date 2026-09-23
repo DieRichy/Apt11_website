@@ -41,8 +41,14 @@ const nav: NavItem[] = [
   ] },
 ];
 
+function HiwinCompanyLink({ mobile = false }: { mobile?: boolean }) {
+  return <Link className={`header-social-link header-social-hiwin${mobile ? " mobile-hiwin-link" : ""}`} href="https://hiwin-japan.co.jp/" target="_blank" rel="noreferrer" aria-label="HIWIN corporate website" title="HIWIN Japan">
+    <Image src="/images/hiwin_logo.png" alt="" width={1400} height={422} unoptimized />
+  </Link>;
+}
+
 function HeaderSocialLinks({ mobile = false }: { mobile?: boolean }) {
-  return <div className={`header-socials${mobile ? " mobile-header-socials" : ""}`} role="group" aria-label="Social media and company links">
+  return <div className={`header-socials${mobile ? " mobile-header-socials" : ""}`} role="group" aria-label={mobile ? "Social media links" : "Social media and company links"}>
     <Link className="header-social-link" href="https://www.instagram.com/zhuyi_hotel/" target="_blank" rel="noreferrer" aria-label="Apartment Hotel 11 on Instagram" title="Instagram">
       <Image className="social-logo-image social-logo-instagram" src="/images/social-instagram.png" alt="" width={438} height={438} unoptimized />
     </Link>
@@ -52,15 +58,14 @@ function HeaderSocialLinks({ mobile = false }: { mobile?: boolean }) {
     <Link className="header-social-link" href="https://www.xiaohongshu.com/user/profile/665d65e4000000000303207a?xhsshare=CopyLink&appuid=665d65e4000000000303207a&apptime=1721635778" target="_blank" rel="noreferrer" aria-label="Apartment Hotel 11 on Xiaohongshu" title="Xiaohongshu">
       <Image className="social-logo-image social-logo-xiaohongshu" src="/images/social-xiaohongshu.png" alt="" width={438} height={438} unoptimized />
     </Link>
-    <Link className="header-social-link header-social-hiwin" href="https://hiwin-japan.co.jp/" target="_blank" rel="noreferrer" aria-label="HIWIN corporate website" title="HIWIN Japan">
-      <Image src="/images/hiwin_logo.png" alt="" width={1400} height={422} unoptimized />
-    </Link>
+    {!mobile && <HiwinCompanyLink />}
   </div>;
 }
 
 function MobileNavigation() {
   return <details className="mobile-navigation">
     <summary className="mobile-menu-trigger" aria-label="Open or close navigation menu">
+      <span>Menu</span>
       <i aria-hidden="true"><b /><b /></i>
     </summary>
     <div className="mobile-nav-panel">
@@ -75,6 +80,7 @@ function MobileNavigation() {
       <div className="mobile-nav-footer">
         <Link href="/en/plan-your-journey" className="button button-light journey-cta-button">Plan your journey</Link>
         <HeaderSocialLinks mobile />
+        <div className="mobile-nav-hiwin"><HiwinCompanyLink mobile /></div>
       </div>
     </div>
   </details>;
