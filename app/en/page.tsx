@@ -55,11 +55,13 @@ export default function HomePage() {
       <section className="section section-paper hiwin-reasons-section">
         <div className="shell">
           <div className="split hiwin-reasons-intro">
-            <div className="hiwin-reasons-heading">
+            <div className="hiwin-reasons-brand">
               <Image className="hiwin-reasons-logo" src="/images/hiwin_logo.png" alt="HIWIN" width={1400} height={422} unoptimized />
-              <p className="eyebrow">Why HIWIN</p>
-              <h2>A stay connected to the city around it.</h2>
-              <ArrowLink href="/en/about">Discover HIWIN and Apartment Hotel 11</ArrowLink>
+              <div className="hiwin-reasons-heading">
+                <p className="eyebrow">Why HIWIN</p>
+                <h2>A stay connected to the city around it.</h2>
+                <ArrowLink href="/en/about">Discover HIWIN and Apartment Hotel 11</ArrowLink>
+              </div>
             </div>
             <div className="split-copy"><p>HIWIN develops and operates Apartment Hotel 11 from Osaka, connecting accommodation with restaurants and services across the city. Ver.2 turns that wider network into three clearer starting levels.</p><p className="muted">This remains a non-transactional planning MVP. Nothing is reserved or charged online, and every final inclusion is confirmed with you.</p></div>
           </div>
