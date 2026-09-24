@@ -44,7 +44,7 @@ export function PackageCard({ item }: { item: JourneyPackage }) {
         <p>{item.summary}</p>
         <div className="package-price"><small>From</small><strong>{item.price}</strong></div>
         <p className="package-basis">For two guests · Preview starting price</p>
-        <ArrowLink href={`/en/packages/${item.slug}`}>Explore the package</ArrowLink>
+        <ArrowLink href={`/en/packages/${item.slug}`}>Discover this journey</ArrowLink>
       </div>
     </article>
   );

@@ -30,9 +30,9 @@ export function HeroRotator() {
     <div className="shell hero-copy">
       <h1>Stay with<br /><span className={`hero-ease hero-ease-${scene.style}`} key={scene.word} style={{ color: scene.color }}>{scene.word}.</span><br />Choose your way into Kansai.</h1>
       <div className="hero-rotator" aria-live="polite" aria-atomic="true"><p key={scene.message}>{scene.message}</p></div>
-      <div className="button-row">
-        <Link className="button button-secondary hero-stays-button" href="/en/packages">Explore the packages</Link>
-        <Link className="button button-secondary hero-stays-button" href="/en/plan-your-journey?package=custom">Build a custom journey</Link>
+      <div className="hero-actions">
+        <Link className="hero-action hero-action-primary" href="/en/packages"><span>Discover the journeys</span><i aria-hidden="true" /></Link>
+        <Link className="hero-action hero-action-secondary" href="/en/plan-your-journey?package=custom"><span>Shape a private journey</span><i aria-hidden="true" /></Link>
       </div>
     </div>
   </div>;

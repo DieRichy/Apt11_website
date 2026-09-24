@@ -2,7 +2,7 @@ import Image from "next/image";
 import { HeroRotator } from "@/components/hero-rotator";
 import { PackageShowcase } from "@/components/package-showcase";
 import { NativeLink as Link } from "@/components/native-link";
-import { ArrowLink, CTA, DestinationCard, PropertyCard, SectionHeading } from "@/components/ui";
+import { ArrowLink, CTA, DestinationCard, PropertyCard } from "@/components/ui";
 import { destinations, journeyPackages, properties, services } from "@/lib/data";
 
 const hiwinReasons = [
@@ -19,7 +19,11 @@ export default function HomePage() {
 
       <section className="section section-paper home-packages-section" id="packages">
         <div className="shell">
-          <SectionHeading eyebrow="Three ways into Kansai" title="Choose your starting level." copy="Each package connects the stay with dining, movement, relaxation, and the experiences around it. Start here, then adjust the details around your dates and priorities." />
+          <div className="home-editorial-heading home-editorial-heading-packages">
+            <span className="home-editorial-number" aria-hidden="true">01</span>
+            <div><p className="eyebrow">Three ways into Kansai</p><h2>Choose your starting level.</h2></div>
+            <p className="home-editorial-aside">Essential <i /> Signature <i /> Prestige</p>
+          </div>
           <PackageShowcase items={journeyPackages} />
           <p className="price-disclaimer">Starting prices are for two guests and 4 days / 3 nights. Airfare is not included. Final price, room category, availability, and confirmed services follow after inquiry.</p>
         </div>
@@ -27,7 +31,10 @@ export default function HomePage() {
 
       <section className="section home-destinations-section">
         <div className="shell">
-          <SectionHeading eyebrow="Where the five parts take you" title="A reason to go, not a checklist to finish." copy="Every destination is considered through the same five-part lens. Explore the first three routes now; the wider Kansai directions remain planning previews until their service details are confirmed." />
+          <div className="home-editorial-heading home-editorial-heading-destinations">
+            <div><p className="eyebrow">Where the five parts take you</p><h2>A reason to go, not a checklist to finish.</h2></div>
+            <div className="home-destination-line" aria-label="Featured destinations"><span>Osaka</span><i /><span>Kyoto</span><i /><span>Wakayama</span></div>
+          </div>
           <div className="destination-grid destination-grid-home">{destinations.slice(0, 3).map((destination) => <DestinationCard destination={destination} key={destination.slug} />)}</div>
           <div className="button-row" style={{marginTop: 34}}><Link className="button button-secondary" href="/en/destinations">Explore all destinations</Link></div>
         </div>
@@ -35,7 +42,11 @@ export default function HomePage() {
 
       <section className="section section-tint home-services-section">
         <div className="shell">
-          <SectionHeading eyebrow="One connected journey" title="Stay. Dine. Move. Relax. Enjoy." copy="Apartment Hotel 11 and HIWIN bring the practical parts of a Kansai stay into one clearer conversation." />
+          <div className="home-editorial-heading home-editorial-heading-centered">
+            <p className="eyebrow">One connected journey</p>
+            <h2>Stay. Dine. Move. Relax. Enjoy.</h2>
+            <div className="home-five-part-line" aria-hidden="true"><span>住</span><i /><span>食</span><i /><span>行</span><i /><span>癒</span><i /><span>楽</span></div>
+          </div>
           <div className="service-pillar-grid">
             {services.map((service) => <article className="service-pillar" key={service.number}>
               <div className="service-pillar-image"><Image src={service.image} alt="" fill sizes="(max-width: 650px) 100vw, 20vw" /></div>
@@ -47,7 +58,10 @@ export default function HomePage() {
 
       <section className="section home-stays-section">
         <div className="shell">
-          <SectionHeading eyebrow="The Essential Osaka base" title="Three Apartment Hotel 11 stays." copy="Choose the neighborhood and apartment layout that best fits your group, then connect the rest of the Essential package around it." />
+          <div className="home-editorial-heading home-editorial-heading-stays">
+            <div><p className="eyebrow">The Essential Osaka base</p><h2>Three Apartment Hotel 11 stays.</h2></div>
+            <div className="home-stay-index"><span>Kuromon 9</span><span>Tsutenkaku 3</span><span>Namba Minami 7</span></div>
+          </div>
           <div className="property-grid">{properties.map((property) => <PropertyCard property={property} key={property.slug} />)}</div>
         </div>
       </section>
