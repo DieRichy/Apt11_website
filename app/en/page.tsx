@@ -20,9 +20,9 @@ export default function HomePage() {
       <section className="section section-paper home-packages-section" id="packages">
         <div className="shell">
           <div className="home-editorial-heading home-editorial-heading-packages">
-            <span className="home-editorial-number" aria-hidden="true">01</span>
-            <div><p className="eyebrow">Three ways into Kansai</p><h2>Choose your starting level.</h2></div>
-            <p className="home-editorial-aside">Essential <i /> Signature <i /> Prestige</p>
+            <p className="eyebrow">Three ways into Kansai</p>
+            <h2>Choose your starting level.</h2>
+            <div className="home-editorial-index" aria-label="Package levels"><span>Essential</span><i /><span>Signature</span><i /><span>Prestige</span></div>
           </div>
           <PackageShowcase items={journeyPackages} />
           <p className="price-disclaimer">Starting prices are for two guests and 4 days / 3 nights. Airfare is not included. Final price, room category, availability, and confirmed services follow after inquiry.</p>
@@ -32,8 +32,9 @@ export default function HomePage() {
       <section className="section home-destinations-section">
         <div className="shell">
           <div className="home-editorial-heading home-editorial-heading-destinations">
-            <div><p className="eyebrow">Where the five parts take you</p><h2>A reason to go, not a checklist to finish.</h2></div>
-            <div className="home-destination-line" aria-label="Featured destinations"><span>Osaka</span><i /><span>Kyoto</span><i /><span>Wakayama</span></div>
+            <p className="eyebrow">Where the five parts take you</p>
+            <h2>A reason to go, not a checklist to finish.</h2>
+            <div className="home-editorial-index" aria-label="Featured destinations"><span>Osaka</span><i /><span>Kyoto</span><i /><span>Wakayama</span><i /><span>And more…</span></div>
           </div>
           <div className="destination-grid destination-grid-home">{destinations.slice(0, 3).map((destination) => <DestinationCard destination={destination} key={destination.slug} />)}</div>
           <div className="button-row" style={{marginTop: 34}}><Link className="button button-secondary" href="/en/destinations">Explore all destinations</Link></div>
