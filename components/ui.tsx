@@ -31,9 +31,9 @@ export function PropertyCard({ property }: { property: Property }) {
   );
 }
 
-export function PackageCard({ item, featured = false }: { item: JourneyPackage; featured?: boolean }) {
+export function PackageCard({ item }: { item: JourneyPackage }) {
   return (
-    <article className={`package-card${featured ? " package-card-featured" : ""}`}>
+    <article className={`package-card package-card-${item.slug}`}>
       <Link href={`/en/packages/${item.slug}`} className="package-card-image">
         <Image src={item.image} alt={item.imageAlt} fill sizes="(max-width: 800px) 100vw, 33vw" unoptimized />
         <span className="package-tier">{item.tier}</span>
